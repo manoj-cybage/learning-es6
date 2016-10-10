@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
+const gutil = require('gulp-util');
 
 gulp.task('babel', () => {
     return gulp.src('src/*.js')
@@ -10,6 +11,28 @@ gulp.task('babel', () => {
 });
 
 gulp.task('default', function() {
-    console.log(`Let's rock \\m/ to code with ES6`);
+    gutil.log(gutil.colors.bgGreen('Autobot:'), gutil.colors.yellow(`Let's rock \\m/ to code with ES6`));
+    gutil.log(gutil.colors.bgYellow('@iamgoangle:'), gutil.colors.gray(`Hey dude!!`));
+    console.log(`
+                /|  /|  ---------------------------
+                ||__||  |                         |
+               /   O O\\__  I am a Pirate Software |
+              /          \\   Developer !!         |
+             /      \\     \\                       |
+            /   _    \\     \\ ----------------------
+           /    |\\____\\     \\      ||
+          /     | | | |\\____/      ||
+         /       \\| | | |/ |     __||
+        /  /  \\   -------  |_____| ||
+       /   |   |           |       --|
+       |   |   |           |_____  --|
+       |  |_|_|_|          |     \\----
+       /\                  |
+      / /\        |        /
+     / /  |       |       |
+ ___/ /   |       |       |
+|____/    c_c_c_C/ \\C_c_c_c
+
+`);
 	gulp.watch('src/*.js', ['babel']);
 });
