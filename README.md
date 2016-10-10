@@ -3,6 +3,7 @@ Learning ES6 Harmony
 
 # Prerequisite
 1. Installed NodeJS to your machine
+2. [Growl for Windows](http://www.growlforwindows.com/gfw/) (Optional)
 
 # Installation
 1. Fork or clone this repository
@@ -15,3 +16,13 @@ Learning ES6 Harmony
 
 # Build (Through gulp task) :whale:
 1. Open cli > `gulp`
+
+# Stack list
+1. gulp
+2. gulp-babel
+3. gulp-notification
+3. babel
+4. ES6
+
+# Screenshot
+![screen shot](gulp-task-with-notification.png)

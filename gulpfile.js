@@ -1,11 +1,17 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const gutil = require('gulp-util');
+const notify = require("gulp-notify");
+const debug = require('gulp-debug');
 
 gulp.task('babel', () => {
     return gulp.src('src/*.js')
         .pipe(babel({
             presets: ['es2015']
+        }))
+        .pipe(notify({
+            message: "file: <%= file.relative %>",
+            onLast: false
         }))
         .pipe(gulp.dest('lib'));
 });
